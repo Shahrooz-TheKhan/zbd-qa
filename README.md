@@ -155,4 +155,8 @@ Focus areas:
 
 file: `part-3-problem-solving.md`
 
+## AI Tool Usage
 
+AI tools were used for initial setup, drafting, and wording polish.
+
+All final decisions and validation were done manually by reviewing the output, running the code, and verifying behavior locally.
