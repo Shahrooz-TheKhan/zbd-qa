@@ -163,12 +163,15 @@ All final decisions and validation were done manually by reviewing the output, r
 
 ## Test results 
 
-API Functional tests results
+#### API Functional tests results
+
 <img width="547" height="239" alt="API tests" src="https://github.com/user-attachments/assets/aa1312f7-6c2a-4821-af32-03a0b156b1d5" />
 
-API load test results
+#### API load test results
+
 <img width="992" height="817" alt="API LOAD TEST" src="https://github.com/user-attachments/assets/e4ba522e-3d4c-44be-8f5f-2f27b7b143e7" />
 
-Terraform smoke test results 
+#### Terraform smoke test results 
+
 <img width="460" height="120" alt="Terraform smoke tests" src="https://github.com/user-attachments/assets/7c7ac6fd-5e0a-4d0f-8e37-dee1ae40e71a" />
 
