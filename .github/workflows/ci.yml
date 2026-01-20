@@ -1,5 +1,6 @@
 name: CI
 
+# Run CI on PRs (to block bad merges) and on main pushes (to protect main)
 on:
   pull_request:
     branches: [ "main" ]
@@ -9,23 +10,30 @@ on:
 jobs:
   tests:
     name: Option A - API Tests
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-latest # Standard hosted runner; consistent + fast
 
     steps:
+      # Checks out the repository so subsequent steps can access code
       - name: Checkout repo
         uses: actions/checkout@v4
 
+      # Pin a known Node version so CI matches local expectations
+      # Enable npm caching to speed up repeated runs in a mono-repo.
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
           node-version: "20"
           cache: "npm"
+          # Cache is keyed off the lockfile for the subproject we’re testing
           cache-dependency-path: option-a-api-load/package-lock.json
 
+      # Use npm ci (not npm install) for reproducible installs from the lockfile
       - name: Install dependencies
         working-directory: option-a-api-load
         run: npm ci
 
+      # Run Jest/Supertest functional tests for the mock payment API
       - name: Run tests
         working-directory: option-a-api-load
         run: npm test
+
