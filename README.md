@@ -142,7 +142,7 @@ The smoke test verifies:
   - The application is reachable and healthy
   - The database is running and accepting connections
     
-### Env and Secret strategdy 
+### Env and Secret strategy 
 
 location: `option-c-terraform/docs/ENV_AND_SECRETS.md`
 
