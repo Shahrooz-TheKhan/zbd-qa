@@ -141,6 +141,10 @@ cd ../scripts
 The smoke test verifies:
   - The application is reachable and healthy
   - The database is running and accepting connections
+    
+### Env and Secret strategdy 
+
+location: `option-c-terraform/docs/ENV_AND_SECRETS.md`
 
 ## Part 3 – Problem Solving
 
